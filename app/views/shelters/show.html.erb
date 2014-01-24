@@ -1,0 +1,12 @@
+<% @page_title = "避難場所の詳細情報" %>
+
+<h1><%= @page_title %></h1>
+<p><%= link_to "編集", [:edit, @shelter] %></p>
+<table>
+	<tr>
+		<th width="150">名前</th>
+		<td><%= @shelter.id %></td>
+		<td><%= @shelter.name %></td>
+	</tr>
+</table> 
+<p><%= link_to "topに戻る", :shelters %></p>

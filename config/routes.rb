@@ -1,7 +1,8 @@
 ShelterInfo::Application.routes.draw do
-   root to: "home#index"
+  get "about" => "home#about", as: "about"
+  root to: "home#index"
   get "home/index"
-
+  resources :shelters
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

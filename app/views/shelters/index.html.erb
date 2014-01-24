@@ -1,0 +1,21 @@
+<% @page_title = "避難所リスト" %>
+<h1><%= @page_title %></h1>
+<p><%= link_to "新規", :new_shelter %></p>
+<% if @shelters.present? %>
+<table>
+	<tr>
+		<th>名前</th>
+	</tr>
+	<% @shelters.each do |shelter| %>
+	<tr>
+		<td align="right"><%= shelter.name %></td>
+		<td>
+			<%= link_to "編集", [:edit, shelter] %>
+			<%= link_to "削除", shelter, method: :delete, confirm: "本当に削除しますか？" %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+<% else %>
+<p>避難場所情報がありません</p>
+<% end %>
