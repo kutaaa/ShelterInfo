@@ -5,7 +5,7 @@ class SheltersController < ApplicationController
 		@shelters = Shelter.all
 		respond_to do |format|
 			format.html
-			format.json	{render json: @shelters}
+			format.json	{render json: @shelters, :callback => params[:callback]}
 		end
 	end
 
@@ -16,7 +16,7 @@ class SheltersController < ApplicationController
 		@shelter = Shelter.find(params[:id])
 		respond_to do |format|
 			format.html
-			format.json {render json: @shelter}
+			format.json {render json: @shelter, :callback => params[:callback]}
 		end
 	end
 	
