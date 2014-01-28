@@ -3,6 +3,10 @@
 class SheltersController < ApplicationController
 	def index
 		@shelters = Shelter.all
+		respond_to do |format|
+			format.html
+			format.json	{render json: @shelters}
+		end
 	end
 
 	def search
@@ -10,6 +14,10 @@ class SheltersController < ApplicationController
 
 	def show
 		@shelter = Shelter.find(params[:id])
+		respond_to do |format|
+			format.html
+			format.json {render json: @shelter}
+		end
 	end
 	
 	def new

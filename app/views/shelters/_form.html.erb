@@ -3,4 +3,24 @@
 		<th><%= form.label :name, "名前" %></th>
 		<td><%= form.text_field :name, size: 8 %></td>
 	</tr>
+	<tr>
+		<th><%= form.label :address, "住所" %></th>
+		<td><%= form.text_field :address, size: 20 %></td>
+	</tr>
+	<tr>
+		<th><%= form.label :tel, "電話番号" %></th>
+		<td><%= form.text_field :tel, size: 8 %></td>
+	</tr>
+	<tr>
+		<th><%= form.label :lat, "緯度" %></th>
+		<td><%= form.text_field :lat, size: 8 %></td>
+	</tr>
+	<tr>
+		<th><%= form.label :lng, "経度" %></th>
+		<td><%= form.text_field :lng, size: 8 %></td>
+	</tr>
+	<tr>
+		<th><%= form.label :capacity, "許容人数" %></th>
+		<td><%= form.text_field :capacity, size: 8 %>人</td>
+	</tr>
 </table>

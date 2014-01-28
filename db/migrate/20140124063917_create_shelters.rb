@@ -10,7 +10,7 @@ class CreateShelters < ActiveRecord::Migration
       t.string :type
       t.float :floorage
       t.date :day
-       
+
       t.timestamps
     end
   end

@@ -8,9 +8,8 @@
 	</tr>
 	<% @shelters.each do |shelter| %>
 	<tr>
-		<td align="right"><%= shelter.name %></td>
+		<td align="right"><%= link_to shelter.name, shelter %></td>
 		<td>
-			<%= link_to "編集", [:edit, shelter] %>
 			<%= link_to "削除", shelter, method: :delete, confirm: "本当に削除しますか？" %>
 		</td>
 	</tr>
